@@ -1,3 +1,6 @@
+//scripted
+
+//declarative
 pipeline {
   agent any
   stages{

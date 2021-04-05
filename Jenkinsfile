@@ -16,8 +16,7 @@ pipeline {
 			steps {
 				//echo "Docker Home: $dockerHome"
 				//echo "Maven Home: $mavenHome"
-				sh 'mvn --version'
-				sh 'docker version'
+				
 				echo "Build"
 				echo "PATH - $PATH"
 				echo "BUILD_NUMBER - $env.BUILD_NUMBER"
@@ -25,6 +24,8 @@ pipeline {
 				echo "JOB_NAME - $env.JOB_NAME"
 				echo "BUILD_TAG - $env.BUILD_TAG"
 				echo "BUILD_URL - $env.BUILD_URL"
+				sh 'mvn --version'
+				sh 'docker version'
 			}
 		}
 		stage('Compile') {

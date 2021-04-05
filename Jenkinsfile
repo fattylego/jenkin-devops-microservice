@@ -14,6 +14,8 @@ pipeline {
 	stages {
 		stage('Checkout') {
 			steps {
+				echo "Docker Home: $dockerHome"
+				echo "Maven Home: $mavenHome"
 				sh 'mvn --version'
 				sh 'docker version'
 				echo "Build"
